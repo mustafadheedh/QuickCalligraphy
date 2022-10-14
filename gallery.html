@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gallery</title>
+
+    <!--lightbox-->
+    <link rel="stylesheet" href="dist/css/lightbox.min.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Berkshire+Swash&family=Cormorant+Garamond:wght@700&family=Dancing+Script&family=Emilys+Candy&family=New+Rocker&family=Nosifer&family=Qwigley&family=Redressed&family=Reggae+One&family=Sonsie+One&family=Trade+Winds&family=Yatra+One&display=swap"
+        rel="stylesheet">
+
+    <!--AOS plugin-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--owl carousel css links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <style>
+        .slider {
+            width: 100%;
+            height: 400px;
+            margin: auto;
+            background-image: url('img/9.jpg');
+            background-size: 100% 100%;
+            animation: slides 10s infinite linear;
+            box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes slides {
+            0% {
+                background-image: url('img/9.jpg');
+            }
+            25% {
+                background-image: url('img/expert1.webp');
+            }
+            50% {
+                background-image: url('img/1.jpg');
+            }
+            75% {
+                background-image: url('img/1.jpg');
+            }
+        }
+
+        #back2Top {
+            width: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            z-index: 999;
+            display: none;
+            cursor: pointer;
+            -moz-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+            position: fixed;
+            bottom: 50px;
+            right: 0;
+            background-color: rgb(6, 70, 99);
+            color: rgb(193, 251, 252);
+            text-align: center;
+            font-size: 30px;
+            text-decoration: none;
+            border-radius: 50%;
+
+        }
+
+        #back2Top:hover {
+            background-color: #DDF;
+            color: black;
+            transition: 1s;
+        }
+
+        .example-image {
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+
+        .example-image:hover {
+            transform: translateY(-15px);
+            transition: 1s;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbarcustom"></div>
+
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark " data-aos="slide-down">
+        <div class="container">
+            <a data-aos="zoom-in-down" class="navbar-brand" id="navbrand" href="index.html"><img style="width: 120px;" src="img/logo.png"
+                    alt=""></a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="category.html">Categories</a>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a data-aos="slide-down" class="nav-link dropdown-toggle" href="#" id="mydropdown" data-bs-toggle="dropdown">Division</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="basic.html">Basic</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="advance.html">Adnavce</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="expert.html">Expert</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+
+    <!-- gallery section -->
+
+
+    <div class="container">
+        <center>
+            <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(6, 70, 99)">GALLERY</h1>
+        </center>
+    </div>
+
+    <div class="slider" style="width: 80%"></div><br>
+
+    <div class="w3-container">
+
+        <center>
+            <div class="w3-show-inline-block">
+                <div class="w3-bar">
+                    <button class="w3-btn w3-black" id="all-btn"> Show all</button>
+                    <button class="w3-btn w3-teal" id="arabic-btn"> Arabic Calligraphy</button>
+                    <button class="w3-btn w3-black" id="western-btn"> Western Calligraphy</button>
+                </div>
+            </div>
+
+            <div class="w3-show-inline-block">
+                <div class="w3-bar">
+                    <button class="w3-btn w3-teal" id="greek-btn"> Greek Calligraphy</button>
+                    <button class="w3-btn w3-black" id="indic-btn"> Indic Calligraphy</button>
+                    <button class="w3-btn w3-teal" id="east-btn"> East-Asian Calligraphy</button>
+                </div>
+            </div>
+        </center>
+    </div>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 arabic-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic9.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                    <img class="example-image" src="calligrapy pics/arabic9.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 arabic-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic2.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard.">
+                    <img class="example-image" src="calligrapy pics/arabic2.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 arabic-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic3.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close.">
+                    <img class="example-image" src="calligrapy pics/arabic3.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 arabic-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic10.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                    <img class="example-image" src="calligrapy pics/arabic10.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 arabic-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic8.png" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard.">
+                    <img class="example-image" src="calligrapy pics/arabic8.png" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 arabic-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic1.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close.">
+                    <img class="example-image" src="calligrapy pics/arabic1.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 arabic-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic4.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/arabic4.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 arabic-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic5.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/arabic5.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 arabic-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic6.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/arabic6.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 arabic-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/arabic7.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/arabic7.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 western-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western3.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western3.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 western-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western4.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western4.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 western-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western5.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western5.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 western-img" style="height: 220px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western1.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western1.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 western-img" style="height: 220px;" data-aos="zoom-out"
+                <a class="example-image-link" href="calligrapy pics/western10.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western10.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 western-img" style="height: 220px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western6.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western6.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 western-img" style="height: 220px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western7.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western7.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 western-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western2.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western2.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 western-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western8.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western8.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 western-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/western9.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/western9.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 greek-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek1.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek1.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 greek-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek2.png" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek2.png" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 greek-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek3.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek3.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 greek-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek4.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek4.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 greek-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek8.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek8.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 greek-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek7.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek7.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 greek-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek9.png" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek9.png" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 greek-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek5.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek5.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 greek-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek6.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek6.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 greek-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/greek10.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/greek10.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 indic-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic1.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic1.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 indic-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic4.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic4.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 indic-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic5.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic5.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 indic-img" style="height: 220px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic2.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic2.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 indic-img" style="height: 220px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic10.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic10.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 indic-img" style="height: 220px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic3.png" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic3.png" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 indic-img" style="height: 220px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic6.gif" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic6.gif" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 indic-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic7.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic7.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 indic-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic8.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic8.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 indic-img" style="height: 260px;" data-aos="zoom-out">
+                <a class="example-image-link" href="calligrapy pics/indic9.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/indic9.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 east-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian1.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian1.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 east-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian3.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian3.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 east-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian4.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian4.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 east-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian5.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian5.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 east-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian10.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian10.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 east-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian2.png" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian2.png" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 east-img" style="height: 220px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian7.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian7.jpg" alt="" width="100%" height="200px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 east-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian6.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian6.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 east-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian8.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian8.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 east-img" style="height: 260px;" data-aos="zoom-in">
+                <a class="example-image-link" href="calligrapy pics/east-asian9.jpg" data-lightbox="example-set">
+                    <img class="example-image" src="calligrapy pics/east-asian9.jpg" alt="" width="100%" height="240px" style="border: 1px solid black">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--footer secton-->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <a style="text-decoration-line: none" href="https://aptech-education.com.pk/events.aspx?id=2052&mon=$a"><span>Aptech
+                                        Garden
+                                    </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>0321-123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>aptechgarden@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"></a>
+                            </div>
+                            <div class="footer-text">
+                                <h3 style="color: white; margin-top: -30px">QUICK CALLIGRAPHY</h3>
+                                <p>We are welcoming you to our “Quick Calligraphy” website which will provide an easy way
+                                    to learn. <br> Get to know us!</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f facebook-bg fb"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter twitter-bg tw"></i></a>
+                                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
+                                        class="fa fa-google-plus google-bg go"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="About.html">About us</a></li>
+                                <li><a href="contactus.html">Contact us</a></li>
+                                <li><a href="Slider/Slider2.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="email" placeholder="Email Address" id="email">
+                                    <button><i class="fa fa-telegram air-Plane" onClick="email()"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid copy-r8">
+        <p class="copy">QUICK CALLIGRAPHY &copy; 2022, All Rights Reserved</p><br>
+    </div>
+
+    <a id="back2Top" title="Back to top" href="#"><center><i class="fa fa-angle-right"></i></center></a>
+
+    <!--Jquery 3.6.0 cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--owl carousel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            /**
+ * Listen to scroll to change header opacity class
+ */
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("navbarcustom");
+                } else {
+                    $('.navbar').removeClass("navbarcustom");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+        })
+
+    </script>
+
+    <script>
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#back2Top').fadeIn();
+            } else {
+                $('#back2Top').fadeOut();
+            }
+        });
+        $(document).ready(function () {
+            $("#back2Top").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#arabic-btn').click(function () {
+                $('.indic-img').hide()
+                $('.western-img').hide()
+                $('.greek-img').hide()
+                $('.east-img').hide()
+                $('.arabic-img').show()
+            })
+            $('#western-btn').click(function () {
+                $('.indic-img').hide()
+                $('.western-img').show()
+                $('.greek-img').hide()
+                $('.east-img').hide()
+                $('.arabic-img').hide()
+            })
+            $('#indic-btn').click(function () {
+                $('.indic-img').show()
+                $('.western-img').hide()
+                $('.greek-img').hide()
+                $('.east-img').hide()
+                $('.arabic-img').hide()
+            })
+            $('#greek-btn').click(function () {
+                $('.indic-img').hide()
+                $('.western-img').hide()
+                $('.greek-img').show()
+                $('.east-img').hide()
+                $('.arabic-img').hide()
+            })
+            $('#east-btn').click(function () {
+                $('.indic-img').hide()
+                $('.western-img').hide()
+                $('.greek-img').hide()
+                $('.east-img').show()
+                $('.arabic-img').hide()
+            })
+            $('#all-btn').click(function () {
+                $('.indic-img').show()
+                $('.western-img').show()
+                $('.greek-img').show()
+                $('.east-img').show()
+                $('.arabic-img').show()
+
+            })
+        })
+    </script>
+
+    <!--AOS plugin-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+
+    <!--lightbox-->
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+</body>
+
+</html>

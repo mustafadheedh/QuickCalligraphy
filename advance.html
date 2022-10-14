@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>adnavce calligraphy</title>
+
+
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Berkshire+Swash&family=Cormorant+Garamond:wght@700&family=Dancing+Script&family=Emilys+Candy&family=New+Rocker&family=Nosifer&family=Qwigley&family=Redressed&family=Reggae+One&family=Sonsie+One&family=Trade+Winds&family=Yatra+One&display=swap"
+        rel="stylesheet">
+
+    <!--AOS plugin-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--owl carousel css links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <style>
+        #back2Top {
+            width: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            z-index: 999;
+            display: none;
+            cursor: pointer;
+            -moz-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+            position: fixed;
+            bottom: 50px;
+            right: 0;
+            background-color: rgb(6, 70, 99);
+            color: rgb(193, 251, 252);
+            text-align: center;
+            font-size: 30px;
+            text-decoration: none;
+            border-radius: 50%;
+
+        }
+
+        #back2Top:hover {
+            background-color: #DDF;
+            color: black;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbarcustom"></div>
+
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark " data-aos="slide-down">
+        <div class="container">
+            <a data-aos="zoom-in-down" class="navbar-brand" id="navbrand" href="index.html"><img style="width: 120px;" src="img/logo.png"
+                    alt=""></a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="category.html">Categories</a>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a data-aos="slide-down" class="nav-link dropdown-toggle" href="#" id="mydropdown" data-bs-toggle="dropdown">Division</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="basic.html">Basic</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="advance.html">Adnavce</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="expert.html">Expert</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container">
+        <center>
+            <h1 class="heading">How to start with Modern Calligraphy </h1>
+        </center>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide container" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img1/advance1.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 60vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="img1/advance2.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 60vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="img1/advance3.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 60vh;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div><br>
+
+    <div class="container">
+        <h3 class="heading2">Five Things You Need to Know Before Starting Calligraphy:</h3>
+        <ol style="font-family: 'Balsamiq Sans', cursive;">
+            <li>Start Simple,Learn Faux Calligraphy,Study The Letter Forms,Get The Right Tools & Practice Calligraphy Drills</li>
+            <li>All pen holders, brush pens, nibs, and inks are not the same. Each serves a specific purpose. You will save
+                yourself a lot of frustration, time, and money by getting the right tools.</li>
+            <li>This might be the best piece of calligraphy advice for every beginner. I wish there were a more natural way
+                to get better at calligraphy, but there is not. There is no one magic tool to become a better calligrapher.
+                The magic is in practice!</li>
+            <li>DON’T COMPARE YOURSELF TO OTHERS.</li>
+            <li>GIVE YOURSELF GRACE! Last, but not least, this piece of calligraphy advice for beginners is one we all need,
+                no matter how long we’ve been doing this art!</li>
+        </ol>
+    </div><br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="heading2" style="text-align: right;">How To Hold A Brush Pen?</h1>
+                <p class="para" style="text-align: right;">First things first let’s just quickly cover this part because
+                    i often see beginners struggling with how to hold a brush correctly.</p>
+                <p class="para" style="text-align: right;">Different people like to hold the pen in different ways but the
+                    most important thing is the angle on which you to hold it.</p>
+                <p class="para" style="text-align: right; font-weight: bold; color: brown">Check out the reference image
+                    on right –></p>
+                <p class="para" style="text-align: right;">Holding the pen too upright will not give you the desired effect
+                    (thick and thin contrast) and it will also damage the tip of your pen.</p>
+                <p class="para" style="text-align: right;">That been said, the next important part is to know where to apply
+                    thin strokes and where to apply the thick strokes. (if you already know this feel free to skip to the
+                    next section)</p>
+            </div>
+
+            <div class="col-lg-6">
+                <img src="img1/advance4.png" alt="" style="width: 100%; border: 1px solid lightgray; height: 67vh;">
+            </div>
+        </div>
+    </div><br>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="img1/advance5.webp" alt="" style="width: 100%; height: 65vh;">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="heading2">The general rule is that your strokes going up are thin while the ones going down
+                        are thick.</h3>
+                    <p class="para">
+                        The thick down strokes are created by applying pressure while the up strokes are done with the tip of the pen – without applying
+                        any pressure. <br><br> If you are a complete beginner it is essential that
+                        you first get familiar with the brush pen and how to use it. <br><br> Before even thinking to start
+                        writing letters and words, try to get comfortable creating thin lines when going up and thick lines
+                        when going down. <br><br> This will help you to get to know the tool and you will start developing
+                        a feeling for it in your hand – <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><br>
+
+    <section>
+        <div class="container">
+            <img src="img1/advance6.png" alt="" width="100%" height="400vh">
+        </div><br>
+
+        <div class="container">
+            <center>
+                <h1 class="heading">The basic calligraphy strokes</h1>
+            </center>
+            <p class="para">
+                In calligraphy, you need to start with the very, very basics. These are referred to as ‘strokes’. All of your letters are
+                made up of strokes. So, practice the strokes- over, and over, and over again- until they’re consistent. The
+                more consistent your strokes, the more consistent your letters!
+            </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <img src="img1/strok1.webp" alt="" style="width: 100%; height: 200px; border: 1px solid lightgray">
+                    <h3 class="heading2">1) Up Stroke:</h3>
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        With the upstroke you want to start the bottom and extend upwards with a slight curve ...... <span
+                            style="display: none" class="myhide"> towards the waist. You will want to go slow and try your best
+                            to stay at a consistent speed. Pro Tip: Don’t “Flick”.</span>
+                        <h6 class="hidebtn1" style="text-decoration: underline; cursor: pointer; color: navy">Read More</h6>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="img1/strok2.webp" alt="" style="width: 100%; height: 200px; border: 1px solid lightgray">
+                    <h3 class="heading2">2) Down Stroke:</h3>
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        With the downstroke you will be working opposite to the upstroke. You will want to start ...........
+                        <span style="display: none" class="myhide2">at the top and extend downwards starting with medium
+                            pressure and gradually adding more as you get to the bottom. Make sure as you approach the bottom
+                            you ease off the pressure. Again you will want to go slow and stay at a consistent speed.
+                        </span>
+                        <h6 class="hidebtn2" style="text-decoration: underline; cursor: pointer; color: navy">Read More</h6>
+                    </p style="font-family: 'Balsamiq Sans', cursive;">
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="img1/strok3.webp" alt="" style="width: 100%; height: 200px; border: 1px solid lightgray">
+                    <h3 class="heading2">3) Over turn:</h3>
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        With this stroke you will want to start at the bottom applying light pressure for your upstroke ........
+                        <span style="display: none" class="myhide3">and then curving over into a thick downstroke. You want
+                            to make sure your two lines stay parallel and that all strokes stay on the same plane. Pro Tip:
+                            No Flick or tail at the bottom you want to end it straight.</span>
+                        <h6 class="hidebtn3" style="text-decoration: underline; cursor: pointer; color: navy">Read More</h6>
+                    </p style="font-family: 'Balsamiq Sans', cursive;">
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="img1/strok4.webp" alt="" style="width: 100%; height: 200px; border: 1px solid lightgray">
+                    <h3 class="heading2">4) Underturn:</h3>
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        Starting at the top moving downwards you want to apply a heavy pressure going into a ........
+                        <span style="display: none" class="myhide4">light upstroke – you again want to make sure that your
+                            two lines stay parallel and make sure to let off the pressure early</span>
+                        <h6 class="hidebtn4" style="text-decoration: underline; cursor: pointer; color: navy">Read More</h6>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <img src="img1/strok5.webp" alt="" style="width: 100%; height: 200px; border: 1px solid lightgray">
+                    <h3 class="heading2">5) Compound Curve:</h3>
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        With this stroke you are combining both the overturn and the underturn – the tricky ........
+                        <span style="display: none" class="myhide5">part with this stroke is keeping all 3 lines parallel
+                            this time. Some things to watch for is not making points at the top and bottom of the curves,
+                            not keeping the middle parallel and making sure not to add a flick or swoosh at the end as pretty
+                            as that might look.</span>
+                        <h6 class="hidebtn5" style="text-decoration: underline; cursor: pointer; color: navy">Read More</h6>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="img1/strok6.webp" alt="" style="width: 100%; height: 200px; border: 1px solid lightgray">
+                    <h3 class="heading2">6) Oval:</h3>
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        One of the most important things to remember with this stroke is that you want to start off on ........
+                        <span style="display: none" class="myhide6">the side. Most tend to start at the top and this creates
+                            a gap where the lines end up meeting. This one starts with an upstroke light pressure and as
+                            you transition at the top into heavy pressure downstroke, then another transition at the bottom
+                            back into a light pressure upstroke. Pro tips: Try not to make the top and bottom pointed</span>
+                        <h6 class="hidebtn6" style="text-decoration: underline; cursor: pointer; color: navy">Read More</h6>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="img1/strok7.webp" alt="" style="width: 100%; height: 200px; border: 1px solid lightgray">
+                    <h3 class="heading2">7) Ascending Loop:</h3>
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        With this stoke you start in the middle with a light upstroke and adding pressure as you come .......
+                        <span style="display: none" class="myhide7"> back down. You will transition at the top and curve
+                            down into a heavy downstroke. Make sure everything is at the same angle and that you don’t end
+                            up with a tail where the loop extends through.</span>
+                        <h6 class="hidebtn7" style="text-decoration: underline; cursor: pointer; color: navy">Read More</h6>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <img src="img1/strok8.webp" alt="" style="width: 100%; height: 200px; border: 1px solid lightgray">
+                    <h3 class="heading2">8) Descending Loop:</h3>
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        For this final stroke you will be starting with a heavy downstroke applying pressure until you ........
+                        <span style="display: none" class="myhide8">come back up with light upstroke. Similar to the ascending
+                            loop you want to make sure you maintain a steady speed and don’t end up with the loop extending
+                            through creating a tail.</span>
+                        <h6 class="hidebtn8" style="text-decoration: underline; cursor: pointer; color: navy">Read More</h6>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><br>
+
+
+
+    <!--footer secton-->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <a style="text-decoration-line: none" href="https://aptech-education.com.pk/events.aspx?id=2052&mon=$a"><span>Aptech
+                                        Garden
+                                    </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>0321-123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>aptechgarden@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"></a>
+                            </div>
+                            <div class="footer-text">
+                                <h3 style="color: white; margin-top: -30px">QUICK CALLIGRAPHY</h3>
+                                <p>We are welcoming you to our “Quick Calligraphy” website which will provide an easy way
+                                    to learn. <br> Get to know us!</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f facebook-bg fb"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter twitter-bg tw"></i></a>
+                                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
+                                        class="fa fa-google-plus google-bg go"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="About.html">About us</a></li>
+                                <li><a href="contactus.html">Contact us</a></li>
+                                <li><a href="Slider/Slider2.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="email" placeholder="Email Address" id="email">
+                                    <button><i class="fa fa-telegram air-Plane" onClick="email()"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid copy-r8">
+        <p class="copy">QUICK CALLIGRAPHY &copy; 2022, All Rights Reserved</p><br>
+    </div>
+
+    <a id="back2Top" title="Back to top" href="#"><center><i class="fa fa-angle-right"></i></center></a>
+
+    <!--Jquery 3.6.0 cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--owl carousel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            /**
+ * Listen to scroll to change header opacity class
+ */
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("navbarcustom");
+                } else {
+                    $('.navbar').removeClass("navbarcustom");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+        })
+
+    </script>
+    <!--AOS plugin-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+    <script>
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#back2Top').fadeIn();
+            } else {
+                $('#back2Top').fadeOut();
+            }
+        });
+        $(document).ready(function () {
+            $("#back2Top").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn1").click(function () {
+                $(".myhide").slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn2").click(function () {
+                $(".myhide2").slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn3").click(function () {
+                $(".myhide3").slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn4").click(function () {
+                $(".myhide4").slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn5").click(function () {
+                $(".myhide5").slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn6").click(function () {
+                $(".myhide6").slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn7").click(function () {
+                $(".myhide7").slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn8").click(function () {
+                $(".myhide8").slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn1").click(function () {
+                $(this).text(function (i, text) {
+                    return text === "READ LESS" ? "READ MORE" : "READ LESS";
+                })
+            });
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".hidebtn2").click(function () {
+                $(this).text(function (i, text) {
+                    return text === "READ LESS" ? "READ MORE" : "READ LESS";
+                })
+            });
+        })
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $(".hidebtn3").click(function () {
+      $(this).text(function(i, text){
+          return text === "READ LESS" ? "READ MORE" : "READ LESS";
+      })
+   });
+    })
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $(".hidebtn4").click(function () {
+      $(this).text(function(i, text){
+          return text === "READ LESS" ? "READ MORE" : "READ LESS";
+      })
+   });
+    })
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $(".hidebtn5").click(function () {
+      $(this).text(function(i, text){
+          return text === "READ LESS" ? "READ MORE" : "READ LESS";
+      })
+   });
+    })
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $(".hidebtn6").click(function () {
+      $(this).text(function(i, text){
+          return text === "READ LESS" ? "READ MORE" : "READ LESS";
+      })
+   });
+    })
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $(".hidebtn7").click(function () {
+      $(this).text(function(i, text){
+          return text === "READ LESS" ? "READ MORE" : "READ LESS";
+      })
+   });
+    })
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $(".hidebtn8").click(function () {
+      $(this).text(function(i, text){
+          return text === "READ LESS" ? "READ MORE" : "READ LESS";
+      })
+   });
+    })
+    </script>
+
+</body>
+
+</html>

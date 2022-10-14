@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>basic calligraphy</title>
+
+
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Berkshire+Swash&family=Cormorant+Garamond:wght@700&family=Dancing+Script&family=Emilys+Candy&family=New+Rocker&family=Nosifer&family=Qwigley&family=Redressed&family=Reggae+One&family=Sonsie+One&family=Trade+Winds&family=Yatra+One&display=swap"
+        rel="stylesheet">
+
+    <!--AOS plugin-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--owl carousel css links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        #back2Top {
+            width: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            z-index: 999;
+            display: none;
+            cursor: pointer;
+            -moz-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+            position: fixed;
+            bottom: 50px;
+            right: 0;
+            background-color: rgb(6, 70, 99);
+            color: rgb(193, 251, 252);
+            text-align: center;
+            font-size: 30px;
+            text-decoration: none;
+            border-radius: 50%;
+
+        }
+
+        #back2Top:hover {
+            background-color: #DDF;
+            color: black;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbarcustom"></div>
+
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark " data-aos="slide-down">
+        <div class="container">
+            <a data-aos="zoom-in-down" class="navbar-brand" id="navbrand" href="index.html"><img style="width: 120px;" src="img/logo.png"
+                    alt=""></a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="category.html">Categories</a>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a data-aos="slide-down" class="nav-link dropdown-toggle" href="#" id="mydropdown" data-bs-toggle="dropdown">Division</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="basic.html">Basic</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="advance.html">Adnavce</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="expert.html">Expert</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- basic section -->
+    <br>
+    <div>
+        <h1 class="heading" style="text-align: center">How To Learn Basic Calligraphy Techniques</h1>
+    </div><br>
+    <div><img src="img1/top cover.webp" style="width: 100%;" alt=""></div>
+    <br>
+    <div>
+        <h1 class="heading" style="text-align: center">Basics of Calligraphy and Hand Lettering</h1>
+    </div>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3 class="heading2">What is calligraphy?</h3>
+                <p class="para" style="font-size: 20px">The word “calligraphy” originates from the Greek language, and means
+                    the art of beautiful writing. Even centuries ago, it gave people all over the world the opportunity to
+                    communicate with each other. Whether in the form of cave painting, hieroglyphics, Asian characters or
+                    in the form of Arabic or western writing, calligraphy was and always will be seen as an art of communication.</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img1/1.webp" style="width: 100%;" alt="">
+            </div>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <h3 class="heading2">What is calligraphy at Faber-Castell?</h3>
+        <p class="para" style="font-size: 20px">With this content, Faber-Castell wants to introduce you to the world of calligraphy.
+            Using our Pitt Artist Pen, we want to show you how you can magically change simple things to great artworks in
+            a personal way. Your imagination knows no limits!
+        </p>
+    </div><br>
+
+    <div class="container">
+        <h1 class="heading" style="text-align: center">Calligraphy For Beginners</h1>
+    </div><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="img1/gif1.gif" alt="" style="width: 100%; border-radius: 20px; border: 1px solid black; ">
+            </div>
+            <div class="col-lg-8">
+                <p class="para" style="font-size: 20px">I must confess that I rarely write in real life. The hand lettering
+                    is hardly one of my strongest traits. I type or tap almost all the time, which is why I am losing my
+                    hand lettering skills. I get into embarrassing situations from time to time because of that. So, I prefer
+                    to avoid writing but it's not always possible, that's why all my paper documents that should be filled
+                    out by hand look like childish scribbles (shame on me!)
+                </p>
+                <p class="para" style="font-size: 20px">
+                    Do you have the same problems with your lettering? If you were searching for hand lettering tutorials for beginners you definitely
+                    have them. Tutorials from the hand lettering artists are just what you need.
+                </p>
+                <p class="para" style="font-size: 20px">
+                    Let's study calligraphy for beginners together with a collection of lettering & calligraphy guides, including brush & pen
+                    lettering guides.
+                </p>
+            </div>
+        </div>
+    </div><br>
+
+    <section>
+        <div class="container">
+            <h1 class="heading">Techniques - The basics of calligraphy and hand lettering</h1>
+            <p class="para" style="font-size: 20px">In order to achieve optimal results, it is advisable to learn the basic
+                techniques of calligraphy first. You will enjoy experimenting with different colours, techniques and nibs.
+            </p>
+        </div>
+        <div class="container">
+            <center><img src="img1/2.webp" alt="" style="width: 90%;"></center>
+        </div>
+        <div class="container">
+            <ul style="font-family: 'Balsamiq Sans', cursive;">
+                <li>
+                    <b>Base line:</b> The writing line upon which the body of a letter sits
+                </li>
+                <li>
+                    <b>Ascender line:</b> The guideline which sets the height of an ascending letter
+                </li>
+                <li>
+                    <b>Cap line:</b> The guideline which sets the height of a capital letter
+                </li>
+                <li>
+                    <b>Ascender:</b> The portion of a letter that is between the 7 x-line and the 2 ascender line
+                </li>
+                <li>
+                    <b>Descender:</b> The portion of a letter that lies below the 1 base line
+                </li>
+                <li>
+                    <b>x-height:</b> The height of a letter or the portion the script that is located between the 1 base
+                    line and the 2 ascender line (the height of the lower case „x“)
+                </li>
+                <li>
+                    <b>x-line:</b> The guideline showing correct position for upper limit of the 6 x-height
+                </li>
+                <li>
+                    <b>Slant line:</b> The guideline showing the correct slant
+                </li>
+            </ul>
+        </div><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="img1/3.jpg" alt="" style="width: 100%;">
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        <b>Slant:</b> The slope of a letter, measured from the vertical. <br>
+                        <b>Nib width:</b> The width of the writing tool. A letter written at 4 nib widths high will appear
+                        twice as heavy as one written at 8 nib widths using the same writing tool.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="img1/4.jpg" alt="" style="width: 100%">
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        <b>Hairline:</b> A very thin line. <br>
+                        <b>Pen Angle:</b> The angle at which the nib meets the paper, relative to the base line.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="img1/5.jpg" alt="" style="width: 100%">
+                    <p style="font-family: 'Balsamiq Sans', cursive;">
+                        <b>Downstroke:</b> A stroke directed downwards towards the base line or descender line. <br>
+                        <b>Cross bar:</b> Horizontal stroke forming part of a letter (such as the „t“ or „H“).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><br>
+
+    <section>
+        <div class="container">
+            <center>
+                <h1 class="heading">The Basic Calligraphy Equipment</h1>
+            </center>
+            <center>
+                <h2 class="heading2">What Equipments do I need for Modern Calligraphy?</h2>
+            </center>
+            <p class="para" style="font-size: 20px">
+                Now that we know the basic difference between traditional calligraphy and modern calligraphy, it’s time to review some of
+                the essential items that we will need. Modern calligraphy can be practiced with a whole variety of different
+                tools, such as
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <img src="img1/ink and paper.jpg" alt="" style="width: 100%; height: 120px;">
+                    <center>
+                        <h6>INK AND PAPER</h6>
+                        <a data-toggle="modal" data-target="#myModal" href="" data-toggle="tooltip" data-placement="bottom" title="Click here">Read</a>
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">INK AND PAPER</h1>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+
+                                        <img src="img1/ink and paper.jpg" alt="" width="100%">
+                                        <h3>Ink</h3>
+                                        <p>Sumi Ink is an easy-to-use ink that is great for getting started. I found a big
+                                            bottle at Michaels (still haven’t finished it!), but it is also easy to find
+                                            different brands online.</p>
+                                        <h3>Paper</h3>
+                                        <p>Many of the cartridge-filled pens recommended in this guide are fountain pens.
+                                            They can be filled with cartridges or paired with a converter for access to hundreds
+                                            of different bottled inks. However, make sure to fill these pens with an ink
+                                            made specifically for fountain pens. India and calligraphy inks are formulated
+                                            with binders that will clog the feed and nib, which will ruin the pen. Learn
+                                            more about fountain pen inks in our beginner's guide.</p>
+                                        <h3>Quality Calligraphy Paper</h3>
+                                        <h6>For General Pointed Pen Calligraphy Practice</h6>
+                                        <p>For pointed pen calligraphy, you need a minimally absorbent paper with no texture
+                                            on the surface and a minimal paper weight of 100gsm.</p>
+                                        <img src="img1/paper1.webp" alt="" width="50%">
+                                        <p>However, choosing paper for calligraphy projects and practice may not be cut and
+                                            dry. To make sure your tools match your paper check out my paper comparison post
+                                            here: The Best Paper for Calligraphy</p>
+
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <img src="img1/dip pen.jpg" alt="" style="width: 100%; height: 120px;">
+                    <center>
+                        <h6>DIP PENS</h6>
+                        <a data-toggle="modal" data-target="#myModal1" href="" data-toggle="tooltip" data-placement="bottom" title="Click here">Read</a>
+                        <div class="modal" id="myModal1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">DIP PENS</h1>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+
+                                        <img src="img1/dip pen.jpg" alt="" width="100%">
+                                        <h3>Dip Pens</h3>
+                                        <p>With dip pens, the possibilities are endless. It is better to use calligraphy
+                                            inks because they are more viscous than fountain pen inks and will cling to the
+                                            nib better. This prevents the ink from sliding off the nib and creating unsightly
+                                            blobs. Some calligraphy inks come in different colors or even with glitter mixed
+                                            in, which can add texture and dimension to your calligraphy. Fountain pen inks
+                                            can be used with dip pens, though calligraphers may find it helpful to thicken
+                                            the ink.</p>
+                                        <img src="img1/dip1.jpg" alt="" width="50%"><br> <br>
+                                        <p>When choosing paper, forgo your regular printer paper. Calligraphy pens generally
+                                            dispense more ink, and with low quality paper, bleeding is more likely to happen.
+                                            Choose something that is higher quality so it will not bleed or feather. If you
+                                            are not sure what kind of paper is suitable for calligraphy, look for paper that
+                                            is fountain pen friendly.</p>
+
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </center>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <img src="img1/brush-pen.png" alt="" style="width: 100%; height: 120px;">
+                    <center>
+                        <h6>BRUSH PEN</h6>
+                        <a data-toggle="modal" data-target="#myModal2" href="" data-toggle="tooltip" data-placement="bottom" title="Click here">Read</a>
+                        <div class="modal" id="myModal2">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">BRUSH PEN</h1>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+
+                                        <img src="img1/brush-pen.png" alt="" width="100%">
+                                        <h3>Brush Pens</h3>
+                                        <p>However, if you are a total beginner i would advise you start practicing with
+                                            a brush pen simply because it is much easier to learn how to work with compared
+                                            to the traditional dip pen. Don’t worry, I am also going to recommend specific
+                                            products so you don’t have to waste time looking around for them.</p>
+                                        <p>The reason for including brush pens as a separate category here is because brush
+                                            lettering (aka brush calligraphy) has become extremely popular in recent years.</p>
+                                        <img src="img1/brush1.webp" alt="" width="50%"><br><br>
+                                        <p>There are many different brush pens available on the market today, and they all
+                                            differ from each other. </p>
+                                        <p>They differ in aspects such as – </p>
+                                        <ul style="text-align: left; padding-left: 20px">
+                                            <li>Size</li>
+                                            <li>Nib flexibility</li>
+                                            <li>Ink flow</li>
+                                            <li>Colors, etc.</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <img src="img1/nibs.jpg" alt="" style="width: 100%; height: 120px;">
+                    <center>
+                        <h6>NIBS</h6>
+                        <a data-toggle="modal" data-target="#myModal3" href="" data-toggle="tooltip" data-placement="bottom" title="Click here">Read</a>
+                        <div class="modal" id="myModal3">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">CALLIGRAPHY NIBS</h1>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+
+                                        <img src="img1/nibs.jpg" alt="" width="100%">
+                                        <h3>NEW NIBS ARE DIRRRRTY</h3>
+                                        <p>Brand-new nibs do come with a coating that keeps them from rusting while in storage.
+                                            Which is great! Unfortunately, the coating also keeps ink from sticking properly
+                                            to the nib. Which is less great… Fortunately, cleaning your new nibs is easy!
+                                            There are tons of different ways….</p>
+                                        <h3>NIBS HAVE A LIFESPAN</h3>
+                                        <p>Even though they’re made of pretty tough metal, nibs still wear out with use!
+                                            It’s impossible to give you an average lifespan it varies widely depending on
+                                            the TYPE of nib, how OFTEN you use it and HOW you use it.</p>
+                                        <h3>SOME NIBS ARE DUDS!</h3>
+                                        <p>Nibs aren’t always manufactured perfectly. Depending on the brand and style, you
+                                            can often get brand-new ones that just feel “off.” If your nib just refuses to
+                                            release the ink, or feels excessively scratchy, or dumps ink more frequently
+                                            than before… it might be a dud! If you’re serious about calligraphy, it’s best
+                                            to keep several nibs on hand so you can change them out and save yourself the
+                                            frustration.
+                                        </p>
+                                        <img src="img1/pibs1.jpg" alt="" width="50%"><br>
+
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <img src="img1/Pencils_hb.jpg" alt="" style="width: 100%; height: 120px;">
+                    <center>
+                        <h6>PENCILS</h6>
+                        <a data-toggle="modal" data-target="#myModal4" href="" data-toggle="tooltip" data-placement="bottom" title="Click here">Read</a>
+                        <div class="modal" id="myModal4">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">PENCILS</h1>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+
+                                        <img src="img1/Pencils_hb.jpg" alt="" width="100%">
+                                        <h3>Pencils</h3>
+                                        <p>This tool is such an essential part of ANY lettering/calligraphy toolbox. In modern
+                                            calligraphy we are mainly using the pencil to sketch out rough concepts, create
+                                            guidelines and for those who are on a budget you can even practice calligraphy
+                                            with it. When it comes to the pencil, I would recommend a simple HB pencil or
+                                            a mechanical pencil like the Staedtler Mars 780 Technical Mechanical Pencil I
+                                            am also going to recommend specific products so you don’t have to waste time
+                                            looking around for them.</p>
+                                        <h3>How to Choose a Pencil</h3>
+                                        <p>Pencil calligraphy can be created with a variety of pencils, but not all pencils
+                                            are up to the challenge. Pencils graded HB, B, or 2B are best because they have
+                                            a fairly soft graphite core. If you’re not sure what grade your pencil is, go
+                                            ahead and try to use it anyway!</p>
+                                        <img src="img1/pencil1.webp" alt="" width="50%"><br><br>
+                                        <p>Regardless of which pencil you use, make sure it is not a mechanical pencil! Pencils
+                                            that you have to manually sharpen are best for creating pencil calligraphy</p>
+
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <img src="img1/markers.jpg" alt="" style="width: 100%; height: 120px;">
+                    <center>
+                        <h6>MARKERS</h6>
+                        <a data-toggle="modal" data-target="#myModal5" href="" data-toggle="tooltip" data-placement="bottom" title="Click here">Read</a>
+                        <div class="modal" id="myModal5">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">MARKERS</h1>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+
+                                        <img src="img1/markers.jpg" alt="" width="100%">
+                                        <h3>Markers</h3>
+                                        <p>Mostly used for creating Faux Calligraphy and other styles of modern calligraphy,
+                                            these markers can indeed be a great addition to your lettering. Adding effects,
+                                            patterns, colors, pretty much anything that comes to your mind, is one of the
+                                            benefits when working with modern calligraphy.</p>
+                                        <h3>How to Write Marker/Crayola Calligraphy</h3>
+                                        <p>When you write calligraphy with any markers — Crayola or otherwise — you’re looking
+                                            to make thin upstrokes and thick downstrokes. Upstrokes occur when you push your
+                                            pen from bottom to top to make part of a letter. Downstrokes occur when you pull
+                                            your pen from top to bottom to make part of a letter. I find that it’s easiest
+                                            to make upstrokes when the pen is somewhat upright, as pictured below. Make sure
+                                            you don’t apply much pressure to the marker’s tip, and gently push upward.</p>
+                                        <img src="img1/marker1.webp" alt="" width="50%"><br><br>
+                                        <p>To make a downstroke, you’ll slightly rotate the pen to the right (or to the left,
+                                            if you’re left-handed). Apply firm pressure to the marker, pulling down. That
+                                            should result in a nice, thick stroke.</p>
+
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section><br>
+
+
+    <!--footer secton-->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <a style="text-decoration-line: none" href="https://aptech-education.com.pk/events.aspx?id=2052&mon=$a"><span>Aptech
+                                        Garden
+                                    </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>0321-123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>aptechgarden@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"></a>
+                            </div>
+                            <div class="footer-text">
+                                <h3 style="color: white; margin-top: -30px">QUICK CALLIGRAPHY</h3>
+                                <p>We are welcoming you to our “Quick Calligraphy” website which will provide an easy way
+                                    to learn. <br> Get to know us!</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f facebook-bg fb"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter twitter-bg tw"></i></a>
+                                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
+                                        class="fa fa-google-plus google-bg go"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="About.html">About us</a></li>
+                                <li><a href="contactus.html">Contact us</a></li>
+                                <li><a href="Slider/Slider2.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="email" placeholder="Email Address" id="email">
+                                    <button><i class="fa fa-telegram air-Plane" onClick="email()"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid copy-r8">
+        <p class="copy">QUICK CALLIGRAPHY &copy; 2022, All Rights Reserved</p><br>
+    </div>
+
+    <a id="back2Top" title="Back to top" href="#"><center><i class="fa fa-angle-right"></i></center></a>
+
+    <!--Jquery 3.6.0 cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--owl carousel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            /**
+ * Listen to scroll to change header opacity class
+ */
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("navbarcustom");
+                } else {
+                    $('.navbar').removeClass("navbarcustom");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+        })
+
+    </script>
+    <script>
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#back2Top').fadeIn();
+            } else {
+                $('#back2Top').fadeOut();
+            }
+        });
+        $(document).ready(function () {
+            $("#back2Top").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <!--AOS plugin-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

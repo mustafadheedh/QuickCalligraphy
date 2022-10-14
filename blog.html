@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>blog</title>
+
+
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Berkshire+Swash&family=Cormorant+Garamond:wght@700&family=Dancing+Script&family=Emilys+Candy&family=New+Rocker&family=Nosifer&family=Qwigley&family=Redressed&family=Reggae+One&family=Sonsie+One&family=Trade+Winds&family=Yatra+One&display=swap"
+        rel="stylesheet">
+
+    <!--AOS plugin-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--owl carousel css links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <style>
+        #back2Top {
+            width: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            z-index: 999;
+            display: none;
+            cursor: pointer;
+            -moz-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+            position: fixed;
+            bottom: 50px;
+            right: 0;
+            background-color: rgb(6, 70, 99);
+            color: rgb(193, 251, 252);
+            text-align: center;
+            font-size: 30px;
+            text-decoration: none;
+            border-radius: 50%;
+
+        }
+
+        #back2Top:hover {
+            background-color: #DDF;
+            color: black;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbarcustom"></div>
+
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark " data-aos="slide-down">
+        <div class="container">
+            <a data-aos="zoom-in-down" class="navbar-brand" id="navbrand" href="index.html"><img style="width: 120px;" src="img/logo.png"
+                    alt=""></a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="category.html">Categories</a>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a data-aos="slide-down" class="nav-link dropdown-toggle" href="#" id="mydropdown" data-bs-toggle="dropdown">Division</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="basic.html">Basic</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="advance.html">Adnavce</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="expert.html">Expert</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><br>
+
+
+    <section>
+        <div>
+            <div class="container">
+                <img src="img/blog3.jpg" alt="" width="100%" height="350vh" style="border: 1px solid black; box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);">
+            </div>
+            <!-- <div class="container" style="padding-top: 10px">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="img/about.jpg" alt="" height="350px" width="100%" style="border: 1px solid black; box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);">
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/history.jpg" alt="" height="350px" width="100%" style="border: 1px solid black; box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);">
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/history2.jpg" alt="" height="350px" width="100%" style="box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39); border: 1px solid black">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section><br>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <center><img data-aos="fade-up" src="blog-img/blog.jpg" alt="" width="80%"></center>
+                </div>
+                <div class="col-lg-6">
+                    <h1 data-aos="fade-left" style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(6, 70, 99)">
+                        About Calligraphy
+                    </h1>
+                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+                        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">
+                            Calligraphy is an art which requires the possession of certain skills and techniques that translates into ornate lettering
+                            where letters are in harmony with each other. Calligraphy is not just beautiful handwriting;
+                            even if you don’t possess good handwriting, you can learn Calligraphy. Mastering the art requires
+                            a lot of patience because every letter is written slowly and neatly. One would also require great
+                            attention to detail. In the words Calligraphy the elevation of something simple as handwriting
+                            into a refined ornate form..
+                        </p>
+                        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">
+                            Type is saying things to us all the time. Typefaces express a mood, an atmosphere. They give words a certain coloring. <br>
+                            <span style="font-weight: bold; color: brown">– Rick Poynor (“Helvetica”, 2007)</span>
+                        </p>
+                        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">
+                            Calligraphy is the most intimate, personal, spontaneous form of expression. Like a fingerprint or a voice, it is unique for
+                            each person. <br>
+                            <span style="font-weight: bold; color: brown">– Hermann Zapf</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br><br><br>
+
+    <section>
+        <div class="container" data-aos="zoom-in">
+            <center><img src="blog-img/modern.png" alt="" width="40%"></center>
+        </div><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(6, 70, 99)">
+                        Modern Calligraphy
+                    </h1>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">
+                        Modern calligraphy is any calligraphy style that does not follow the fundamental rules of traditional calligraphy scripts
+                        such as Copperplate, Spencerian, Italic, Blackletter, etc. Modern calligraphy relies on certain principles
+                        of traditional calligraphy. However, it can provide you with more creative freedom.
+                    </p>
+                    <p style="font-size: 18px; color: brown">
+                        Modern calligraphy can be practiced with a whole variety of different tools, such as –
+                    </p>
+                    <ul style="padding-left: 30px;font-family: 'Balsamiq Sans', cursive; text-align: justify;">
+                        <li>Brush pens</li>
+                        <li>Classic dip pens</li>
+                        <li>Pencil</li>
+                        <li>Markers</li>
+                        <li>Broad nib pens (Parallel Pen)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <img src="blog-img/modern-cal.webp" alt="" width="100%" style="border: 1px solid black">
+                </div>
+            </div>
+        </div>
+    </section><br><br>
+
+
+    <section>
+        <div class="container" data-aos="zoom-in">
+            <center><img src="blog-img/trade.png" alt="" width="50%"></center>
+        </div><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <img src="blog-img/trade-cal.webp" alt="" width="100%" height="450vh" style="border: 1px solid black">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(6, 70, 99)">
+                        Traditional Calligraphy
+                    </h1>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">
+                        Traditional calligraphy comes in a variety of hands, such as Copperplate and Spencerian. Each specific hand has its own set
+                        of rules, so it’s helpful to know which one you want to learn before getting started. The vast majority
+                        of our students get started with a Copperplate hand, and that’s the one we recommend starting with.In
+                        addition to rules, you’ll want to learn some of the key vocabulary so when you take tutorials you
+                        know what to look for.
+                    </p>
+                    <p style="font-size: 18px; color: brown">
+                        The characteristics of traditional calligraphy, such as –
+                    </p>
+                    <ul style="padding-left: 30px;font-family: 'Balsamiq Sans', cursive; text-align: justify;">
+                        <li>Elegant and sophisticated</li>
+                        <li>Lots of history involved</li>
+                        <li>Neutral color palette</li>
+                        <li>Typically associated with pointed pen</li>
+                        <li>Script is more slanted</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><br><br>
+
+
+    <section>
+        <div class="container" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <center>
+                <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(6, 70, 99)">
+                    Tips to Improve Your Handwriting
+                </h1>
+            </center>
+        </div><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 style="font-family: 'Berkshire Swash', cursive; color: rgb(135, 100, 69); font-size: 30px; ">
+                        1: Use a Nice Pen
+                    </h3>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; text-align: justify;">
+                        The adjective “nice” is subjective — you’ll have to hunt to find the pen that works for you! My choice of pen for everyday
+                        writing is the Pilot G2 05 because of the stroke width, the grip, and the jet black ink. I also like
+                        that it’s so responsive; I don’t have to exert a lot of pressure on the pen to ensure consistent
+                        ink flow.
+                    </p>
+                    <center><img src="blog-img/gif1.gif" alt="" width="100%" height="350px" style="border: 1px solid gray"></center>
+                    <br>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 18px; text-align: center;">
+                        You can find thousands of pens on the market, so I encourage you to shop around. Pick up a pen here and there, and give it
+                        a try! It doesn’t matter if you prefer gel pens, fountain pens, ballpoint pens.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <h3 style="font-family: 'Berkshire Swash', cursive; color: rgb(135, 100, 69); font-size: 30px; ">
+                        2: Maintain a Relaxed Grip
+                    </h3>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; text-align: justify;">
+                        A nice, relaxed grip is one of the main things that will improve your handwriting. A “relaxed grip” means that none of the
+                        muscles in your hand are overly flexed, and your fingernails shouldn’t be white from squeezing the
+                        pen’s barrel. Many people tend to clutch the pen, which will result in an achy hand after a few minutes
+                        of writing
+                    </p>
+                    <center><img src="blog-img/gif2.gif" alt="" width="100%" height="350px" style="border: 1px solid gray"></center>
+                    <br>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 18px; text-align: center;">
+                        We often clutch without realizing we’re doing it, so try to mentally check yourself every few minutes to make sure you’re
+                        still holding the pen comfortably.
+                    </p>
+                </div>
+            </div>
+        </div><br>
+
+
+        <div class="container" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3 style="font-family: 'Berkshire Swash', cursive; color: rgb(135, 100, 69); font-size: 30px; ">
+                        3: Start with Drills
+                    </h3>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 18px; text-align: justify;">
+                        Whether you plan on writing in cursive or print, it can be difficult to form nice letters without warming up. Doing a couple
+                        of simple drills will help you to write clear, confident characters. You can use the Drills section
+                        of the Improve Your Cursive Worksheet.
+                    </p>
+                    <center><img src="blog-img/4.webp" alt="" width="100%" height="230px" class="imgg"></center>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 16px; text-align: center;">
+                        As children, we are generally taught to keep our paper in a vertical position in front of us. If that works for you, great!
+                        If not, feel free to experiment with different paper rotations. Keeping the paper at a certain angle
+                        can go a long way in helping you to improve your handwriting!
+                    </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3 style="font-family: 'Berkshire Swash', cursive; color: rgb(135, 100, 69); font-size: 30px; ">
+                        4: Practice with Worksheet
+                    </h3>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 18px; text-align: justify;">
+                        If you want a structured way to improve your handwriting, I made a free worksheet for you! It’s three pages long and focuses
+                        on cursive writing — you can download it by clicking here. Basically, the worksheet takes you through
+                        drills, capital & lowercase letters, words, & sentences.
+                    </p>
+                    <center><img src="blog-img/8.webp" alt="" width="100%" height="230px" class="imgg"></center>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 16px; text-align: center;">
+                        The cursive writing featured in the worksheet set isn’t any sort of formal style. Instead, it focuses on the letterforms
+                        that I, personally, use in everyday cursive handwriting. Those letters are easy to create, and they
+                        connect to each other beautifully to make for quick writing.
+                    </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3 style="font-family: 'Berkshire Swash', cursive; color: rgb(135, 100, 69); font-size: 30px; ">
+                        5: Embrace Your own Style
+                    </h3>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 18px; text-align: justify;">
+                        Handwriting is a very fluid, personal thing that is always evolving. It’s not like calligraphy, where you more or less write
+                        the same every time. Instead, you’ll have neat days, and you’ll have not so neat days. No matter
+                        how your handwriting looks (like the notes pictured below).
+                    </p>
+                    <center><img src="blog-img/12.webp" alt="" width="100%" height="230px" class="imgg"></center>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 16px; text-align: center;">
+                        No matter how your handwriting looks, it is a wonderful reflection of you and your personality. That’s why people love receiving
+                        handwritten notes: they represent a piece of you! So, don’t get too hung up on a radical change:
+                        instead, focus on making clearly formed letters that are easy to read.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><br><br><br><br>
+
+
+    <section>
+        <center>
+            <h1 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(6, 70, 99)">
+                SOME MOTIVATIONAL CALLIGRAPHY QUOTES:-
+            </h1>
+        </center><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute1.webp" alt="" width="100%" style="border: 0.5px solid lightgray">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute2.webp" alt="" width="100%">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute3.jpg" alt="" width="100%">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute4.jpg" alt="" width="100%" style="border: 0.5px solid lightgray">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute5.jpg" alt="" width="100%">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute6.jpg" alt="" width="100%">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute7.jpg" alt="" width="100%" style="border: 0.5px solid lightgray">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute8.jpg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute9.jpg" alt="" width="100%">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute10.jpg" alt="" width="100%">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute13.jpg" alt="" width="100%">
+                </div>
+                <div class="blog-hover col-lg-3 col-md-6" style="padding: 20px 10px; transition: 1s;">
+                    <img src="blog-img/qoute12.jpg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--footer secton-->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <a style="text-decoration-line: none" href="https://aptech-education.com.pk/events.aspx?id=2052&mon=$a"><span>Aptech
+                                        Garden
+                                    </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>0321-123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>aptechgarden@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"></a>
+                            </div>
+                            <div class="footer-text">
+                                <h3 style="color: white; margin-top: -30px">QUICK CALLIGRAPHY</h3>
+                                <p>We are welcoming you to our “Quick Calligraphy” website which will provide an easy way
+                                    to learn. <br> Get to know us!</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f facebook-bg fb"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter twitter-bg tw"></i></a>
+                                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
+                                        class="fa fa-google-plus google-bg go"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="About.html">About us</a></li>
+                                <li><a href="contactus.html">Contact us</a></li>
+                                <li><a href="Slider/Slider2.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="email" placeholder="Email Address" id="email">
+                                    <button><i class="fa fa-telegram air-Plane" onClick="email()"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid copy-r8">
+        <p class="copy">QUICK CALLIGRAPHY &copy; 2022, All Rights Reserved</p><br>
+    </div>
+
+    <a id="back2Top" title="Back to top" href="#"><center><i class="fa fa-angle-right"></i></center></a>
+
+    <!--Jquery 3.6.0 cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--owl carousel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            /**
+ * Listen to scroll to change header opacity class
+ */
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("navbarcustom");
+                } else {
+                    $('.navbar').removeClass("navbarcustom");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+        })
+
+    </script>
+
+    <script>
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#back2Top').fadeIn();
+            } else {
+                $('#back2Top').fadeOut();
+            }
+        });
+        $(document).ready(function () {
+            $("#back2Top").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+        });
+    </script>
+
+    <!--AOS plugin-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

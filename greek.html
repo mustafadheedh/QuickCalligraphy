@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Greek calligraphy</title>
+
+
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Berkshire+Swash&family=Cormorant+Garamond:wght@700&family=Dancing+Script&family=Emilys+Candy&family=New+Rocker&family=Nosifer&family=Qwigley&family=Redressed&family=Reggae+One&family=Sonsie+One&family=Trade+Winds&family=Yatra+One&display=swap"
+        rel="stylesheet">
+
+    <!--AOS plugin-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--owl carousel css links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        rossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+
+    <style>
+        .box {
+            background: #000;
+            font-family: 'PT Sans', sans-serif;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease 0s;
+        }
+
+        .box:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .box img {
+            width: 100%;
+            height: 420px;
+            transition: all 0.5s ease-out;
+        }
+
+        .box:hover img {
+            opacity: 0.3;
+            transform: scale(1.15);
+        }
+
+        .box .box-content {
+            width: 100%;
+            padding: 0 20px;
+            opacity: 0;
+            transform: translateY(-50%) rotate(-360deg);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+            transition: all 0.5s ease-out;
+        }
+
+        .box:hover .box-content {
+            opacity: 1;
+            transform: translateY(-50%) rotate(0);
+        }
+
+        .box .title {
+            color: #fff;
+            font-size: 25px;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 0 3px;
+        }
+
+        @media only screen and (max-width:990px) {
+            .box {
+                margin: 0 0 30px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="navbarcustom"></div>
+
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark " data-aos="slide-down">
+        <div class="container">
+            <a data-aos="zoom-in-down" class="navbar-brand" id="navbrand" href="index.html"><img style="width: 120px;" src="img/logo.png"
+                    alt=""></a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="category.html">Categories</a>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a data-aos="slide-down" class="nav-link dropdown-toggle" href="#" id="mydropdown" data-bs-toggle="dropdown">Division</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="basic.html">Basic</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="advance.html">Adnavce</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="expert.html">Expert</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><br>
+
+    <div class="container">
+        <center>
+            <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(6, 70, 99)">Greek Calligraphy</h1>
+        </center>
+    </div>
+
+    <div class="container">
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; text-align: justify">
+            Greek minuscule was a Greek writing style which was developed as a book hand in Byzantine manuscripts during the 9th and
+            10th centuries. It replaced the earlier style of uncial writing, from which it differed in using smaller, more
+            rounded and more connected letter forms, and in using many ligatures. Many of these forms had previously developed
+            as parts of more informal cursive writing.# The basic letter shapes used in the minuscule script are the ancestors
+            of modern lower case Greek letters. From the 10th century onwards, most Byzantine manuscripts of classical and
+            early Christian Greek works were gradually rewritten in the new minuscule style, and few of the older uncial
+            manuscripts were preserved. For this reason, uncial manuscripts are today extremely rare, while early minuscule
+            manuscripts are often the oldest preserved sources attesting an ancient work and may therefore be of central
+            importance for its philological study. Manuscripts from the oldest phase of minuscule writing (mid-9th to mid-10th
+            century) are known in scholarship today as codices vetustissimi ("oldest codices"). Those from the mid-10th to
+            the mid-12th centuries are known as codices vetusti ("old codices"), and later ones as codices recentiores ("newer
+            codices").[2]
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="box">
+                    <img src="category img/22.png" alt="image">
+                    <div class="box-content">
+                        <p class="title">Inscriptions in the Kufic on Qutb Minar, Delhi, built 1192 CE</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="box">
+                    <img src="category img/23.jpg" alt="" width="100%">
+                    <div class="box-content">
+                        <p class="title">A Calligraphic design in Odia script</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="box">
+                    <img src="category img/24.jpg" alt="image" width="100%">
+                    <div class="box-content">
+                        <p class="title">Mantra in Rañjanā script, on the ceiling of a Buddhist temple in China.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="box">
+                    <img src="category img/25.jpg" alt="image" width="100%">
+                    <div class="box-content">
+                        <p class="title">6 different Tibetan script styles traditionally used by Tibetans </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+
+    <!--footer secton-->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <a style="text-decoration-line: none" href="https://aptech-education.com.pk/events.aspx?id=2052&mon=$a"><span>Aptech
+                                        Garden
+                                    </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>0321-123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>aptechgarden@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"></a>
+                            </div>
+                            <div class="footer-text">
+                                <h3 style="color: white; margin-top: -30px">QUICK CALLIGRAPHY</h3>
+                                <p>We are welcoming you to our “Quick Calligraphy” website which will provide an easy way
+                                    to learn. <br> Get to know us!</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f facebook-bg fb"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter twitter-bg tw"></i></a>
+                                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
+                                        class="fa fa-google-plus google-bg go"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="About.html">About us</a></li>
+                                <li><a href="contactus.html">Contact us</a></li>
+                                <li><a href="Slider/Slider2.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="email" placeholder="Email Address" id="email">
+                                    <button><i class="fa fa-telegram air-Plane" onClick="email()"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid copy-r8">
+        <p class="copy">QUICK CALLIGRAPHY &copy; 2022, All Rights Reserved</p><br>
+    </div>
+
+    <!--Jquery 3.6.0 cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--owl carousel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            /**
+ * Listen to scroll to change header opacity class
+ */
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("navbarcustom");
+                } else {
+                    $('.navbar').removeClass("navbarcustom");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+        })
+
+    </script>
+    <!--AOS plugin-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

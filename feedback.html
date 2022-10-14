@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>feedback</title>
+
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!--sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Berkshire+Swash&family=Cormorant+Garamond:wght@700&family=Dancing+Script&family=Emilys+Candy&family=New+Rocker&family=Nosifer&family=Qwigley&family=Redressed&family=Reggae+One&family=Sonsie+One&family=Trade+Winds&family=Yatra+One&display=swap" rel="stylesheet">
+
+    <!--AOS plugin-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--owl carousel css links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+    * {
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+    "sans-serif";
+}
+
+html,
+body {
+  background: rgb(193, 251, 252);
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.wrapper {
+  margin: 50px auto 0;
+  width: 70%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  margin: 0;
+}
+
+form * {
+  font-size: 20px;
+  letter-spacing: 0.075em;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+form .field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #50A5B7, #067D68);
+  width: 100%;
+  height: 64px;
+  transition: width 0.5s ease-in-out;
+  text-align: center;
+  padding: 18px 0;
+}
+
+form .field input[type="text"],
+form .field textarea {
+  border: none;
+  width: 100%;
+  height: 64px;
+  margin: 0;
+  padding-left: 19.5%;
+  color: #313a3d;
+}
+form .field input[type="email"],
+form .field textarea {
+  border: none;
+  width: 100%;
+  height: 64px;
+  margin: 0;
+  padding-left: 19.5%;
+  color: #313a3d;
+}
+form #msg {
+  height: 64px;
+  resize: none;
+  transition: all 333ms ease-in-out;
+  padding-top: 18px;
+}
+form textarea:focus#msg,
+form textarea:not(:placeholder-shown)#msg {
+  height: 166px;
+}
+form input[type="text"]:focus + label,
+form input[type="text"]:not(:placeholder-shown) + label,
+form textarea:focus + label,
+form textarea:not(:placeholder-shown) + label,
+form .field:hover label {
+  width: 18%;
+}
+form input[type="submit"] {
+  background: linear-gradient(90deg, #50A5B7, #067D68);
+  -webkit-appearance: none;
+  border: none;
+  position: relative;
+  padding: 13px 50px;
+  transition: all 0.3s ease-in-out;
+}
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+  background: #fff;
+  border: rgb(6, 70, 99) solid 1px;
+  color: rgb(6, 70, 99);
+  transition: 1s;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbarcustom"></div>
+
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark " data-aos="slide-down">
+        <div class="container">
+            <a data-aos="zoom-in-down" class="navbar-brand" id="navbrand" href="index.html"><img style="width: 120px;" src="img/logo.png" alt=""></a>
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="category.html">Categories</a>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a data-aos="slide-down" class="nav-link dropdown-toggle" href="#" id="mydropdown" data-bs-toggle="dropdown">Division</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="basic.html">Basic</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="advance.html">Adnavce</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="expert.html">Expert</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><br><br>
+
+    <div class="container">
+      <center><h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(6, 70, 99)">Feedback Form</h1></center>
+    </div>
+
+        <div class="wrapper">
+                <form action="#" method="post">
+                  <div class="field">
+                    <input type="text" id="name" name="name" placeholder="Who are you?" pattern="[A-Za-z]{4,10}" title="Four or more characters" autofocus required/>
+                    <label for="name" style="font-weight: 400;">Name</label>
+                  </div>
+                  <div class="field">
+                    <input type="email" id="email" name="email" placeholder="name@domain.tld" required/>
+                    <label for="email" style="font-weight: 400;">E-Mail</label>
+                  </div>
+                  <div class="field">
+                    <textarea id="msg" rows="4" name="msg" placeholder="You message..." pattern=".{1,}" title="please fill out this field" required></textarea>
+                    <label for="msg" style="font-weight: 400;">Message</label>
+                  </div>
+                  
+                  <div class="col-lg-12" style="padding-bottom: 15px">
+                        <h5 class="form-head" style="color: black; font-weight: 650">How satisfied are you with our website?</h5>
+                        <input type="radio" name="rating" id="rating" value="Very satisfied" tabindex="-1" checked><span style="color: rgb(6, 70, 99); font-weight: 500"> Vary Satisfied</span><br>
+                        <input type="radio" name="rating" value="Satisfied" tabindex="-1"><span style="color: rgb(6, 70, 99); font-weight: 500"> Satisfied</span><br>
+                        <input type="radio" name="rating" value="Dissatisfied" tabindex="-1"><span style="color: rgb(6, 70, 99); font-weight: 500"> Not Satisfied</span>
+                    </div>
+                    <input class="button" onclick="checkvalidation()" style="font-weight: 400;" type="submit" value="Send" />
+                </form>
+                
+              
+              </div><br><br>
+      <!--footer secton-->
+    <footer class="footer-section">
+      <div class="container">
+          <div class="footer-cta pt-5 pb-5">
+              <div class="row">
+                  <div class="col-xl-4 col-md-4 mb-30">
+                      <div class="single-cta">
+                          <i class="fa fa-map-marker"></i>
+                          <div class="cta-text">
+                              <h4>Find us</h4>
+                              <a style="text-decoration-line: none" href="https://aptech-education.com.pk/events.aspx?id=2052&mon=$a"><span>Aptech Garden</span></a> 
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-md-4 mb-30">
+                      <div class="single-cta">
+                          <i class="fa fa-phone"></i>
+                          <div class="cta-text">
+                              <h4>Call us</h4>
+                              <span>0321-123456789</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-md-4 mb-30">
+                      <div class="single-cta">
+                          <i class="fa fa-envelope-open"></i>
+                          <div class="cta-text">
+                              <h4>Mail us</h4>
+                              <span>aptechgarden@gmail.com</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-content pt-5 pb-5">
+              <div class="row">
+                  <div class="col-xl-4 col-lg-4 mb-50">
+                      <div class="footer-widget">
+                          <div class="footer-logo">
+                              <a href="index.html"></a>
+                          </div>
+                          <div class="footer-text">
+                              <h3 style="color: white; margin-top: -30px">QUICK CALLIGRAPHY</h3>
+                              <p>We are welcoming you to our “Quick Calligraphy” website which will provide an easy way to learn. <br> Get to know us!</p>
+                          </div>
+                          <div class="footer-social-icon">
+                              <span>Follow us</span>
+                              <a href="https://www.facebook.com/"><i class="fa fa-facebook-f facebook-bg fb"></i></a>
+                              <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter twitter-bg tw"></i></a>
+                              <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="fa fa-google-plus google-bg go"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                      <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Useful Links</h3>
+                          </div>
+                          <ul>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="About.html">About us</a></li>
+                              <li><a href="contactus.html">Contact us</a></li>
+                              <li><a href="Slider/Slider2.html">Blog</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                      <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Subscribe</h3>
+                          </div>
+                          <div class="footer-text mb-25">
+                              <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                          </div>
+                          <div class="subscribe-form">
+                              <form action="#">
+                                  <input type="email" placeholder="Email Address" id="email">
+                                  <button><i class="fa fa-telegram air-Plane" onClick="email()"></i></button>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </footer>
+      <div class="container-fluid copy-r8">
+          <p class="copy">QUICK CALLIGRAPHY &copy; 2022, All Rights Reserved</p><br>
+      </div>
+
+      <!--Jquery 3.6.0 cdn-->
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+      <!--owl carousel-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+      $(document).ready(function(){
+          /**
+* Listen to scroll to change header opacity class
+*/
+function checkScroll(){
+  var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+  if($(window).scrollTop() > startY){
+      $('.navbar').addClass("navbarcustom");
+  }else{
+      $('.navbar').removeClass("navbarcustom");
+  }
+}
+
+if($('.navbar').length > 0){
+  $(window).on("scroll load resize", function(){
+      checkScroll();
+  });
+}
+      })
+
+      </script>
+      
+      <script>
+              
+          function checkvalidation(){
+            var name1 = document.getElementById('name').value;
+            var email1 = document.getElementById('email').value;
+            var msg1 = document.getElementById("msg").value;
+    
+            if(name1.length >= 8 && msg1.length >=1 && email1.length >= 3){
+              alert("Feedback has been Submitted!")
+            }
+            else{
+              alert("please fill out all required fields correctly")
+            }
+          }
+          </script>
+
+  <!--AOS plugin-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+  </script>
+</body>
+</html>

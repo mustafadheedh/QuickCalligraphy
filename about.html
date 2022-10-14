@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about us</title>
+
+
+    <!--bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Berkshire+Swash&family=Cormorant+Garamond:wght@700&family=Dancing+Script&family=Emilys+Candy&family=New+Rocker&family=Nosifer&family=Qwigley&family=Redressed&family=Reggae+One&family=Sonsie+One&family=Trade+Winds&family=Yatra+One&display=swap"
+        rel="stylesheet">
+
+    <!--AOS plugin-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--owl carousel css links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .about-wrapper {
+            height: 90vh;
+        }
+
+        .about-left {
+            background: #4FBDBA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+
+        }
+
+        .about-left-content>div {
+            background: #AEFEFF;
+            padding: 4rem 4rem 2.5rem 5rem;
+            text-align: center;
+
+        }
+
+        .about-left-content {
+            box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+            -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+            -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+        }
+        .about-left-content1>div {
+            background: #AEFEFF;
+            padding: 4rem 4rem 2.5rem 5rem;
+            text-align: center;
+
+        }
+
+        .about-left-content1 {
+            box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+            -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+            -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+        }
+
+        .about-img img {
+            display: block;
+            width: 200px;
+
+        }
+
+        .about-img {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .shadow {
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            width: 200px;
+            height: 180px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .shadow::after {
+            content: "";
+            position: absolute;
+            background: rgba(0, 0, 0, 0.4);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -20px;
+            height: 7px;
+            width: 50px;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+            opacity: 0;
+            transition: all 0.6s ease;
+
+        }
+
+        .shadow:hover .about-img {
+            transform: translateY(-10px);
+
+        }
+
+        .shadow:hover::after {
+            opacity: 1;
+        }
+
+        .about-left-content h2 {
+            font-size: 2rem;
+            margin: 2.2rem 0 0.6rem 0;
+            line-height: 1.2;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #edffec;
+        }
+
+        .about-left-content h3 {
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-top: 1.2rem;
+        }
+        .about-left-content1 h2 {
+            font-size: 2rem;
+            margin: 2.2rem 0 0.6rem 0;
+            line-height: 1.2;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #edffec;
+        }
+
+        .about-left-content1 h3 {
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-top: 1.2rem;
+        }
+
+        .icons {
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 0.8rem 0;
+        }
+
+        .icons li {
+            list-style-type: none;
+            background: #4FBDBA;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            margin: 0 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .icons li:hover {
+            background: #edffec;
+            color: #000;
+        }
+
+        .about-right {
+            background: #fff;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5rem;
+            text-align: center;
+        }
+
+        .about-right h1 {
+            font-size: 7rem;
+            text-transform: uppercase;
+        }
+
+        .about-right h1 span {
+            color: rgb(79, 189, 186);
+        }
+
+        .about-right h2 {
+            font-weight: 600;
+            font-size: 25px;
+        }
+
+        .about-btns {
+            display: flex;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            border: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 0.55rem 0;
+            width: 130px;
+            font-weight: 600;
+            background: transparent;
+            margin: 0 0.5rem;
+            cursor: pointer;
+        }
+
+        .btn.btn-pink {
+            background: #4FBDBA;
+            color: #fff;
+            border-color: #4FBDBA;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .btn.btn-pink:hover {
+            background: transparent;
+            border-color: #4FBDBA;
+            color: black;
+            border: 2px solid #4FBDBA
+        }
+
+        .btn.btn.btn-white {
+            transition: all 0.5s ease-in-out;
+            color: #000;
+        }
+
+        .btn.btn-white:hover {
+            background: #4FBDBA;
+            border-color: #4FBDBA;
+            color: white;
+        }
+
+        .about-para {
+            font-weight: 300;
+
+        }
+
+        #back2Top {
+            width: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            z-index: 999;
+            display: none;
+            cursor: pointer;
+            -moz-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+            position: fixed;
+            bottom: 50px;
+            right: 0;
+            background-color: rgb(6, 70, 99);
+            color: rgb(193, 251, 252);
+            text-align: center;
+            font-size: 30px;
+            text-decoration: none;
+            border-radius: 50%;
+
+        }
+
+        #back2Top:hover {
+            background-color: #DDF;
+            color: black;
+            transition: 1s;
+        }
+
+        @media screen and (min-width: 992px) {
+            .about-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr)
+            }
+            .about-left {
+                position: relative;
+            }
+            .about-left-content {
+                position: absolute;
+                right: -50px;
+            }
+
+            .about-left-content1 {
+                position: absolute;
+                left: -50px;
+            }
+            .aaa {
+                display: none;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="navbarcustom"></div>
+
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark " data-aos="slide-down">
+        <div class="container">
+            <a data-aos="zoom-in-down" class="navbar-brand" id="navbrand" href="index.html"><img style="width: 120px;" src="img/logo.png"
+                    alt=""></a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="category.html">Categories</a>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a data-aos="slide-down" class="nav-link dropdown-toggle" href="#" id="mydropdown" data-bs-toggle="dropdown">Division</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="basic.html">Basic</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="advance.html">Adnavce</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="nav-link" href="expert.html">Expert</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a data-aos="slide-down" class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="about-wrapper">
+        <div class="about-left">
+            <div class="about-left-content">
+                <div>
+                    <div class="shadow">
+                        <div class="about-img">
+                            <img src="blog-img/my pic.jpg" alt="about image">
+                        </div>
+                    </div>
+
+                    <h2>Shaikh <br> Ali</h2>
+                    <h3>Project Manager</h3>
+                </div>
+
+                <ul class="icons">
+                    <a href="https://www.facebook.com/Shaikh.Ali.000888/"><li><i class="fab fa-facebook-f"></i></li></a>
+                    <a href="https://twitter.com/Shaikhoo_01"><li><i class="fab fa-twitter"></i></li></a>
+                    <a href="https://www.instagram.com/actually_im_allyy/"><li><i class="fab fa-instagram"></i></li></a>
+                    <a href="https://www.linkedin.com/in/shaikh-ali-348684225/"><li><i class="fab fa-linkedin"></i></li></a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="about-right">
+            <h1>Hi<span>!</span></h1>
+            <h2>Here's who I am & what I do</h2>
+            <div class="about-btns">
+                <a href="cv/cv.pdf"><button type="button" class="btn btn-pink">resume</button></a>
+                <a href="index.html"><button type="button" class="btn btn-white">project</button></a>
+            </div>
+            <div class="about-para">
+                <p>
+                    My Name is Shaikh Ali, I am student of Aptechgdn, batch 2111(A), <br> My Skills are Ms-Offices ,Html,
+                    Css, Boostrap,Javascript and jquery, <br> "We are a small team of web development agency based in karachi
+                    pakistan. Our mission is to promote small and medium-sized businesses online and work together with startups
+                    to develop disruptive technology".
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="aaa">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+    <div class="about-wrapper">
+        
+
+        <div class="about-right">
+            <h1>Hi<span>!</span></h1>
+            <h2>Here's who I am & what I do</h2>
+            <div class="about-btns">
+                <a href="cv/CV Azhar.pdf"><button type="button" class="btn btn-pink">resume</button></a>
+                <a href="index.html"><button type="button" class="btn btn-white">project</button></a>
+            </div>
+            <div class="about-para">
+                <p>
+                    My Name is Syed Azhar, I am student of Aptechgdn, batch 2111(A), <br> My Skills are Ms-Offices ,Html,
+                    Css, Boostrap,Javascript and jquery, <br> "We are a small team of web development agency based in karachi
+                    pakistan. Our mission is to promote small and medium-sized businesses online and work together with startups
+                    to develop disruptive technology".
+                </p>
+
+            </div>
+        </div>
+
+        <div class="about-left">
+                <div class="about-left-content1">
+                    <div>
+                        <div class="shadow">
+                            <div class="about-img">
+                                <img src="blog-img/azhar.pic" alt="about image">
+                            </div>
+                        </div>
+    
+                        <h2>Syed <br> Azhar</h2>
+                        <h3>Project Member1</h3>
+                    </div>
+    
+                    <ul class="icons">
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                        <li><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+
+    <div class="aaa">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <div class="about-wrapper">
+        <div class="about-left">
+            <div class="about-left-content">
+                <div>
+                    <div class="shadow">
+                        <div class="about-img">
+                            <img src="blog-img/haider-pic.png" alt="about image">
+                        </div>
+                    </div>
+
+                    <h2>Muhammad <br> haider</h2>
+                    <h3>Project Member2</h3>
+                </div>
+
+                <ul class="icons">
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-linkedin"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="about-right">
+            <h1>Hi<span>!</span></h1>
+            <h2>Here's who I am & what I do</h2>
+            <div class="about-btns">
+                <a href="cv/CV haider.pdf"><button type="button" class="btn btn-pink">resume</button></a>
+                <a href="index.html"><button type="button" class="btn btn-white">project</button></a>
+            </div>
+            <div class="about-para">
+                <p>
+                    My Name is Muhammad Haider, I am student of Aptechgdn, batch 2111(A), <br> My Skills are Ms-Offices ,Html,
+                    Css, Boostrap,Javascript and jquery, <br> "We are a small team of web development agency based in karachi
+                    pakistan. Our mission is to promote small and medium-sized businesses online and work together with startups
+                    to develop disruptive technology".
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="aaa">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <div class="about-wrapper">
+
+            <div class="about-right">
+                    <h1>Hi<span>!</span></h1>
+                    <h2>Here's who I am & what I do</h2>
+                    <div class="about-btns">
+                        <a href="cv/CV azhan.pdf"><button type="button" class="btn btn-pink">resume</button></a>
+                        <a href="index.html"><button type="button" class="btn btn-white">project</button></a>
+                    </div>
+                    <div class="about-para">
+                        <p>
+                            My Name is Azhan Sheikh, I am student of Aptechgdn, batch 2111(A), <br> My Skills are Ms-Offices ,Html,
+                            Css, Boostrap,Javascript and jquery, <br> "We are a small team of web development agency based in karachi
+                            pakistan. Our mission is to promote small and medium-sized businesses online and work together with startups
+                            to develop disruptive technology".
+                        </p>
+        
+                    </div>
+                </div>
+
+        <div class="about-left">
+            <div class="about-left-content1">
+                <div>
+                    <div class="shadow">
+                        <div class="about-img">
+                            <img src="blog-img/azhan-pic.png" alt="about image">
+                        </div>
+                    </div>
+
+                    <h2>Azhan <br> Sheikh</h2>
+                    <h3>Project Member3</h3>
+                </div>
+
+                <ul class="icons">
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-linkedin"></i></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="aaa">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <!--footer secton-->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <a style="text-decoration-line: none" href="https://aptech-education.com.pk/events.aspx?id=2052&mon=$a"><span>Aptech
+                                        Garden
+                                    </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>0321-123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>aptechgarden@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"></a>
+                            </div>
+                            <div class="footer-text">
+                                <h3 style="color: white; margin-top: -30px">QUICK CALLIGRAPHY</h3>
+                                <p>We are welcoming you to our “Quick Calligraphy” website which will provide an easy way
+                                    to learn. <br> Get to know us!</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook-f facebook-bg fb"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter twitter-bg tw"></i></a>
+                                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i
+                                        class="fa fa-google-plus google-bg go"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="About.html">About us</a></li>
+                                <li><a href="contactus.html">Contact us</a></li>
+                                <li><a href="Slider/Slider2.html">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="email" placeholder="Email Address" id="email">
+                                    <button><i class="fa fa-telegram air-Plane" onClick="email()"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid copy-r8">
+        <p class="copy">QUICK CALLIGRAPHY &copy; 2022, All Rights Reserved</p><br>
+    </div>
+
+    <a id="back2Top" title="Back to top" href="#"><center><i class="fa fa-angle-right"></i></center></a>
+
+    <!--Jquery 3.6.0 cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--owl carousel-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            /**
+ * Listen to scroll to change header opacity class
+ */
+            function checkScroll() {
+                var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+                if ($(window).scrollTop() > startY) {
+                    $('.navbar').addClass("navbarcustom");
+                } else {
+                    $('.navbar').removeClass("navbarcustom");
+                }
+            }
+
+            if ($('.navbar').length > 0) {
+                $(window).on("scroll load resize", function () {
+                    checkScroll();
+                });
+            }
+        })
+
+    </script>
+    <script>
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+            if (height > 100) {
+                $('#back2Top').fadeIn();
+            } else {
+                $('#back2Top').fadeOut();
+            }
+        });
+        $(document).ready(function () {
+            $("#back2Top").click(function (event) {
+                event.preventDefault();
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+        });
+    </script>
+    <!--AOS plugin-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>
